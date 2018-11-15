@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .list{
+            width: 400px;
+            height: 460px;
+            position: absolute;
+            top: 30%;
+            left: 45%;
+            bottom: 50%;
+            margin: -125px 0 0 -125px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-image: url(img/1374306712_krasivye-oboi-1.jpg);
+        }
+
+
+        .list li {
+            max-width: 300px;
+            max-height: 800px;
+            list-style-type: none;
+            border: 4px solid black;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 10px;
+
+
+        }
+
+
+
+        .list .checked-item {
+            text-decoration: line-through;
+            background-color: darkgrey;
+
+        }
+        .list h1 {
+            color: white;
+
+
+        }
+        span {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 20px;
+            font-family:Tahoma, sans-serif;
+            color: navajowhite;
+
+        }
+    </style>
+</head>
+<body link="black" alink="black" vlink="white">
+<header>
+
+</header>
+<div class="list">
+    <ul>
+<h1>Задачи:</h1>
+       <label><li> <input type="checkbox"><span class="s1">Send to friend</span></li></label>
+        <label><li> <input type="checkbox"><span class="s2">Go to the store</span></li></label>
+            <label><li><input type="checkbox"><span class="s3">Repair the car</span></li></label>
+                <label><li><input type="checkbox"><span class="s4">boil the soup</span></li></label>
+                    <label><li><input type="checkbox"><span class="s5s">lie down in the hour spati</span></li></label>
+
+    </ul>
+
+</div>
+
+<script>
+
+    let container = document.querySelector('.list')
+
+    container.addEventListener('click', (event) => {
+        if (event.target.tagName === 'INPUT') {
+            event.target.nextElementSibling.classList.toggle('checked-item')
+        }
+    })
+</script>
+</body>
+</html>
